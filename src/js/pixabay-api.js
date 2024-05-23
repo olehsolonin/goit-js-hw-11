@@ -7,7 +7,6 @@ export const fetchPhotosByQuery = (searchQuery) => {
 		key: KEY,
 		q: searchQuery,
 		image_type: "photo",
-		per_page: 9,
 		orientation: "horizontal",
 		safesearch: true,
 
@@ -17,10 +16,9 @@ export const fetchPhotosByQuery = (searchQuery) => {
 		if (!response.ok) {
 			throw new Error(response.statusText);
 		}
-
-
 		return response.json();
 	})
 };
 
-// fetchPhotosByQuery();
+
+
